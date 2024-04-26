@@ -21,3 +21,8 @@ x_procesada = x.values.reshape(-1, 1)
 print(x_procesada)
 y_procesada = y.values.reshape(-1,1)
 print(y_procesada)
+
+modelo = LinearRegression()
+modelo.fit(x_procesada, y_procesada)
+
+print("Temperatura en Fahrenheit: ", modelo.predict([[40]]))
